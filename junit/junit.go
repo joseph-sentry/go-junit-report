@@ -146,7 +146,7 @@ type Output struct {
 
 // CreateFromReport creates a JUnit representation of the given gtr.Report.
 func CreateFromReport(report gtr.Report, hostname string) Testsuites {
-	var suites Testsuites
+	var suites Testsuites = Testsuites{Name: "go tests"}
 	for _, pkg := range report.Packages {
 		var duration time.Duration
 		suite := Testsuite{

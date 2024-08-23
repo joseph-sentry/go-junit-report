@@ -53,6 +53,7 @@ func TestCreateFromReport(t *testing.T) {
 	}
 
 	want := Testsuites{
+		Name:     "go tests",
 		Tests:    7,
 		Errors:   3,
 		Failures: 1,
